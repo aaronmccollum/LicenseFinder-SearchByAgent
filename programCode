@@ -1,0 +1,43 @@
+import pprint
+
+# Dictionary List of License Data
+myAgents = {'Joy Deevy': 'January 2020', 'Tyler Beale': 'January 2020', 'Goran Maric': 'February 2020',
+            'Lex Lianos': 'February 2020', 'Claudia Kern': 'March 2020', 'Tyler Nguyen': 'March 2020',
+            'Terri Bui': 'March 2020', 'Emily Oveissi': 'March 2020', 'Sam Nassar': 'April 2020', 'Janet Kang':
+            'April 2020', 'Renee Ro': 'April 2020', 'Steve Wydler': 'April 2020', 'Jane Phillips': 'April 2020',
+            'Hans Wydler': 'April 2020', 'Anne Marie Charaoui': 'May 2020', 'Cindy Macias': 'May 2020', 'Anne Erickson':
+            'May 2020', 'Mariah Sprague': 'June 2020', 'Lam Le': 'July 2020', 'Colt Irick': 'July 2020',
+            'Stephanie Richey': 'July 2020', 'Cindy Polk': 'August 2020', 'Vivian Lyons': 'August 2020',
+            'Donald Trahan': 'September 2020', 'Linda Tunmatip': 'September 2020', 'Marisa Zaneis':
+            'September 2020', 'Shadia Nassar': 'September 2020', 'Karina Badolato': 'October 2020', 'Kimberly Jepsen':
+            'October 2020', 'Kim Jepsen': 'October 2020', 'Will Miner': 'October 2020', 'Stephanie White':
+            'December 2020', 'Brandy Greenwell': 'December 2020', 'Ryan DeMagistris': 'December 2020',
+            'John Stacey': 'January 2021', 'Hala Adra': 'February 2021', 'Ashley Muldoon': 'February 2021', 'Reem Trahan':
+            'February 2021', 'Mark Gaetjen': 'March 2021', 'Tracy Dillard': 'March 2021', 'Jason Goeller':
+            'March 2021', 'Joseph Muldoon': 'April 2021', 'Greta Kohlhagen': 'May 2021', 'Todd Badolato': 'May 2021',
+            'Mindy Venuto': 'June 2021', 'Toby Lim': 'June 2021', 'Jeff Jacobs': 'June 2021', 'Michele Barrera':
+            'June 2021', 'Lisa Bast': 'July 2021', 'Anne DiBenedetto': 'July 2021', 'Rachel Carter': 'July 2021',
+            'Rachel Lim': 'July 2021', 'Jordan Shain': 'July 2021', 'Christine Allocca': 'August 2021', 'Debbie McGuire':
+            'August 2021', 'Stacie Davis': 'August 2021', 'Andrea Roberts': 'August 2021', 'Daniele Yeonas': 'Spetember 2021',
+            'Deborah Lembo': 'September 2021', 'Jessica Riutort': 'October 2021', 'Adelle Robinson': 'October 2021',
+            'Mary Copeland': 'November 2021', 'Kevin Dillard': 'December 2021'}
+
+# Program which pulls expiration data value based on Agent key
+while True:
+    print("Hello! Welcome to LicenseFinder version 1.0!")
+    print("Please enter the agent name you want to search:")
+    dateInput = input()
+    if dateInput == '':
+        break
+
+    if dateInput in myAgents:
+        print(myAgents[dateInput] + ' is the VA license expiration date of ' + dateInput + ".")
+        print("")
+        print("Do you want to search again?")
+        againAnswer = input()
+        if againAnswer == "Yes":
+            continue
+        elif againAnswer == "No":
+            break
+    else:
+        print('I am sorry, I do not find your search in the dictionary.')
